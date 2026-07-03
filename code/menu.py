@@ -25,6 +25,21 @@ class Menu:
             self.menu_text(50, "Mountain", C_ORANGE, ((WIN_WIDTH / 2), 70))
             self.menu_text(50, "Shooter", C_ORANGE, ((WIN_WIDTH / 2), 120))
 
+            # Guia comandos jogadores
+            self.menu_text(14, "Comandos - Player 1", C_ORANGE, (80, 10))
+            self.menu_text(10, "Cima - seta para cima", C_GREY, (65, 30))
+            self.menu_text(10, "Baixo - seta para baixo", C_GREY, (70, 40))
+            self.menu_text(10, "Esquerda - seta para esquerda", C_GREY, (87, 50))
+            self.menu_text(10, "Direita - seta para direita", C_GREY, (80, 60))
+            self.menu_text(10, "Atirar - Espaço", C_GREY, (45, 70))
+
+            self.menu_text(14, "Comandos - Player 2", C_ORANGE, (80, 100))
+            self.menu_text(10, "Cima - w", C_GREY, (25, 120))
+            self.menu_text(10, "Baixo - s", C_GREY, (27, 130))
+            self.menu_text(10, "Esquerda - a", C_GREY, (35, 140))
+            self.menu_text(10, "Direita - d", C_GREY, (35, 150))
+            self.menu_text(10, "Atirar - CTRL", C_GREY, (40, 160))
+
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:
                     self.menu_text(20, MENU_OPTION[i], C_YELLOW, ((WIN_WIDTH / 2), 200 + 25 * i))
