@@ -22,16 +22,18 @@ class Game:
 
             if menu_return in [MENU_OPTION[0], MENU_OPTION[1], MENU_OPTION[2]]:
                 player_score = [0,0] # [Player1, Player2]
-                level = Level(self.window, 'level1', menu_return, player_score) # inicializando objeto
-                level_return = level.run(player_score)
+                player_health = [ENTITY_HEALTH['Player1'],ENTITY_HEALTH['Player2']] # [Player1, Player2]
+
+                level = Level(self.window, 'level1', menu_return, player_score, player_health) # inicializando objeto
+                level_return = level.run(player_score, player_health)
 
                 if level_return:
-                    level = Level(self.window, 'level2', menu_return, player_score)  # inicializando objeto
-                    level_return = level.run(player_score)
+                    level = Level(self.window, 'level2', menu_return, player_score, player_health)  # inicializando objeto
+                    level_return = level.run(player_score, player_health)
 
                     if level_return:
-                        level = Level(self.window, 'level3', menu_return, player_score)  # inicializando objeto
-                        level_return = level.run(player_score)
+                        level = Level(self.window, 'level3', menu_return, player_score, player_health)  # inicializando objeto
+                        level_return = level.run(player_score, player_health)
 
                         if level_return:
                             score.save(menu_return, player_score)
